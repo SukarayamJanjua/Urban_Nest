@@ -1,0 +1,138 @@
+@import "../../responsive.scss";
+
+.homePage {
+  display: flex;
+  height: 100%;
+  // background-image: url('Home_website.png');
+  // background-color: linear-gradient(45deg, red 0 50%, blue 50% 100%);
+
+  .textContainer {
+    flex: 3;
+
+    .wrapper {
+      padding-right: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 50px;
+      height: 100%;
+
+      @include lg{
+        padding-right: 50px;
+      }
+
+      @include md{
+        padding: 0;
+      }
+
+      @include sm{
+        justify-content: flex-start;
+      }
+
+      .title {
+        font-size: 64px;
+
+        @include lg {
+          font-size: 48px;
+        }
+      }
+
+      .boxes {
+        display: flex;
+        justify-content: space-between;
+
+        @include sm {
+          display: none;
+        }
+
+        h1 {
+          font-size: 36px;
+
+          @include lg {
+            font-size: 32px;
+          }
+        }
+
+        h2 {
+          font-size: 20px;
+          font-weight: 300;
+        }
+      }
+      .footer {
+        // display: flex;
+        justify-content: space-between;
+        text-align: center;
+        background-color: #72c201;
+        font-weight: 800;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: large;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        .email>a{
+          text-decoration: underline;
+          color: red;
+        }
+
+        a {
+          transition: all 0.4s ease;
+      
+          @include sm {
+            display: none;
+          }
+      
+          &:hover {
+            scale: 1.05;
+          }
+        }
+      
+
+        @include sm {
+          display: none;
+        }
+
+        h1 {
+          font-size: 36px;
+
+          @include lg {
+            font-size: 32px;
+          }
+        }
+
+        h2 {
+          font-size: 20px;
+          font-weight: 300;
+        }
+
+        .logos-block{
+          display: flex;
+          justify-content: center;
+          padding-top: 10px;
+        }
+      }
+
+    }
+  }
+
+  .imgContainer {
+    flex: 2;
+    background-color: #efeef1;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    @include md {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+      position: absolute;
+      right: 0;
+
+      @include lg {
+        width: 105%;
+      }
+    }
+  }
+}
