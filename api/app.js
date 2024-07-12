@@ -15,7 +15,7 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors({ origin: ["https://urban-nest-client-three.vercel.app"], credentials: true }));
+app.use(cors({ origin: process.env.CLIENT_URL, credentials: true }));
 app.use(express.json());
 app.use(cookieParser());
 
@@ -27,7 +27,7 @@ app.use("/api/test", testRoute);
 // app.use("/api/messages", messageRoute);
 // app.use("/api/chats", aichatRoute);
 
-
-app.listen(8800, () => {
+const port = process.env.PORT || 8800;
+app.listen(port, () => {
   console.log("Server is running!");
 });
