@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiRequest = axios.create({
-  baseURL: "http://localhost:8800/api",
+  baseURL: "https://urban-nest-api-delta.vercel.app/api",
   withCredentials: true,
 });
 
